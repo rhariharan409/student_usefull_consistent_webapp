@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-in</title>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <header>
+        <h1>FocusLoop</h1>
+        <fieldset>
+            <legend></legend>
+                <form>
+                    <label for="name" >User-Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <button onclick="afterclick()">Sign In</button> 
+                    <div class="social-icons">
+  <a href="https://www.google.com" target="_blank">
+    <i class="fa-brands fa-google"></i>
+  </a>
+
+  <a href="https://www.instagram.com" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+</div>
+</form>
+        </fieldset>    </header>
+<script>
+    function afterclick(){
+    const a = document.getElementById("name").value;
+    const b = document.getElementById("password").value;
+    if (!a || !b){
+        alert("please fill all the details");
+    }
+}
+
+</script>
+    
+</body>
+</html>

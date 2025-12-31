@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Today Summary</title>
+    <link rel="stylesheet" href="summary.css">
+    <style>
+         * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg,red,pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 30px 35px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 15px 0;
+    color: #555;
+}
+
+p span {
+    font-weight: bold;
+    color: #222;
+}
+
+#message {
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+    background: #eef2ff;
+    color: #3f51b5;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+a {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #3f51b5;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <h2>Today Summary</h2>
+
+    <p>Focus Time: <span id="time">0 min</span></p>
+    <p>Tasks Completed: <span id="tasks">0</span></p>
+    <p>Study Sessions: <span id="sessions">0</span></p>
+
+    <p id="message"></p>
+
+    <a href="index.html">Back</a>
+</div>
+
+<script src="summary.js"></script>
+<script>
+    let focusTime = Number(localStorage.getItem("focusTime") || 0);
+    let tasksDone = Number(localStorage.getItem("doneTasks") || 0);
+    let sessions = Number(localStorage.getItem("sessions") || 0);
+
+    let minutes = Math.floor(focusTime / 60);
+
+    document.getElementById("time").innerText = minutes + " min";
+    document.getElementById("tasks").innerText = tasksDone;
+    document.getElementById("sessions").innerText = sessions;
+
+    let msg = "Start focusing from tomorrow";
+    if (minutes >= 30) msg = "Good effort today";
+    if (minutes >= 60) msg = "Well done! Keep it up";
+    if (minutes >= 120) msg = "Excellent focus today";
+
+    document.getElementById("message").innerText = msg;
+</script>
+
+</body>

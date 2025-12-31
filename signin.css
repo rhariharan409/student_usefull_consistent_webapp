@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gill sans", sans-serif;
+}
+
+/* Body Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, pink,lightblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Container */
+header {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Title */
+header h1 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Glassmorphism Card */
+fieldset {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Legend */
+legend {
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  text-align: left;
+  color: black;
+}
+
+/* Inputs */
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Input Focus Effect */
+input:focus {
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Icons */
+.social-icons a {
+  font-size: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Individual Colors */
+.fa-google {
+  color: #DB4437;
+}
+
+.fa-instagram {
+  color: #E4405F;
+}
+
+.fa-facebook {
+  color: #1877F2;
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ff6a00, #ff9f1c);
+}
+
+/* Click Effect */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Focus (Accessibility) */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
